@@ -6,9 +6,11 @@ ratingSection.style.display = "flex";
 thankingSection.style.display = "none";
 
 function changeInterface() {
-  ratingSection.style.display = "none";
-  thankingSection.style.display = "flex";
-  document.querySelector("#given-rating").innerText = getRating();
+  if (getRating() !== undefined) {
+    ratingSection.style.display = "none";
+    thankingSection.style.display = "flex";
+    document.querySelector("#given-rating").innerText = getRating();
+  }
 }
 
 function getRating() {
